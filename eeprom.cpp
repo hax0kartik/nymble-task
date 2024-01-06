@@ -20,7 +20,7 @@ uint8_t Read(uint16_t addr, uint8_t *data) {
     return Result::RESULT_OK;
 }
 
-static uint8_t Write(uint16_t addr, uint8_t data) {
+uint8_t Write(uint16_t addr, uint8_t data) {
     if (addr >= __size__) {
         return Result::RESULT_INVALID_ADDR;
     }
