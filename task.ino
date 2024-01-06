@@ -13,15 +13,15 @@ int main() {
         int idx = 0;
 
         do {
-          c = UART::GetChar();
-          int err = EEPROM::Write(idx, c);
-          idx++;
+        	c = UART::GetChar();
+        	int err = EEPROM::Write(idx, c);
+        	idx++;
         } while (c != '\n');
 
         for (int i = 0; i < idx; i++) {
-          EEPROM::Read(i, &c);
-          UART::PutChar(c);
-        }    
+        	EEPROM::Read(i, &c);
+        	UART::PutChar(c);
+        }
     }
 
   return 0;
